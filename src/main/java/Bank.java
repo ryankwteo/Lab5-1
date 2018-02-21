@@ -85,9 +85,9 @@ public class Bank {
         if (source.getAccountBalance() <= 0 || amount <= 0) {
             return false;
         } else {
-            double temp = source.getAccountBalance();
-            source.setAccountBalance(temp - amount);
-            
+            destination.setAccountBalance(destination.getAccountBalance() + amount);
+            source.setAccountBalance(source.getAccountBalance() - amount);
+            return true;
         }
     }
 
@@ -102,6 +102,7 @@ public class Bank {
         /*
          * Implement this function
          */
+        bankAccount.setOwnerName(name);
     }
 
     /**
@@ -118,6 +119,14 @@ public class Bank {
         /*
          * Implement this function
          */
+        return totalAccounts;
+    }
+
+    /**
+     * Increases number of accounts.
+     */
+    public static void addOneAccount() {
+        totalAccounts++;
     }
 
     /**

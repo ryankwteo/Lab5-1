@@ -1,4 +1,3 @@
-
 /*
  *  import java.util.Random;
  */
@@ -14,6 +13,10 @@ public class BankAccount {
 
     /*
      * You may want to use this to distinguish between different kinds of accounts.
+     */
+
+    /**
+     * Different types of bank accounts.
      */
     public enum BankAccountType {
 
@@ -80,6 +83,7 @@ public class BankAccount {
          */
         this.ownerName = name;
         this.accountType = accountCategory;
+        Bank.addOneAccount();
     }
 
     /*
